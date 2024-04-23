@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý Phòng HomeStay</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+      
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="header">
+              <div id="bg-left" style="border-top-right-radius: 18px;">
+                  <div class="logo" >
+                    
+                      <div class="name_logo">
+                          <h3>
+                              <a >Admin</a>
+                          </h3>   
+                      </div>
+                  </div>
+              </div>
+              
+             
+  
+              <div class="user_name ">
+                  <div class="ChucVu" style="font-weight: bold;  margin-right: 20px; margin-top: 5px; font-size: 18px; border: 2px solid rgb(13, 112, 2); border-radius: 10px; padding: 5px 15px; height: 40px;">
+                     
+                  </div>
+                  <a href="#">
+                      <div class="name" style="font-weight: bold;  margin-right: 10px; font-size: 18px;">
+                          
+                      </div>
+                      <i class="fas fa-user"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="content_menu" style="display: flex; ">
+          <div id="bg-left" style="padding-bottom: 100px; border-bottom-left-radius: 18px;">
+                  <div class="list_menu">
+                          <div class="line_menu">
+                              <hr>
+                              <div class="text">Thông tin</div>
+                              <hr>
+                          </div>
+                      <ul>
+                          
+                          <li>
+                              <a class="item" >
+                                  <div class="icon">
+                                      <i class="fas fa-edit"></i>
+                                  </div>
+                                  <div class="text">
+                                      Chỉnh sửa thông tin
+                                  </div>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="item" >
+                                  <div class="icon">
+                                      <i class="fas fa-calendar-week"></i>
+                                  </div>
+                                  <div class="text">
+                                      Lịch làm việc
+                                  </div>
+                              </a>
+                          </li>
+                          
+                  </div>
+                  <div class="list_menu" style="margin-top: 20px;">
+                          <div class="line_menu">
+                              <hr style="height: 2px; margin-top: 13px;">
+                              <div class="text" style="width: 800px;">Quản lý khách hàng</div>
+                              <hr style="height: 2px; margin-top: 13px;">
+                          </div>
+                      <ul>
+                          
+                          <li>
+                              <a class="item"  >
+                                  <div class="icon">
+                                      <i class="fas fa-digital-tachograph"></i>
+                                  </div>
+                                  <div class="text">
+                                      Dữ liệu khách hàng
+                                  </div>
+                              </a>
+                          </li>
+                          <li>
+                            <a class="item" >
+                              <div class="icon">
+                                  <i class="fas fa-edit"></i>
+                              </div>
+                              <div class="text">
+                                      Phản hồi
+                                  </div>
+                              </a>
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <div class="list_menu" style="margin-top: 20px;">
+                          <div class="line_menu">
+                              <hr>
+                              
+                              <div class="text" style="width: 700px;">Quản lý phòng </div>
+                              <div id="roomDetails" style="display: none;">
+                              </div>
+                              
+                              <hr>
+                          </div>
+                      <ul>
+                          
+                         
+                          <li>
+                              <a class="item" >
+                                  <div class="icon">
+                                    <i class="fas fa-edit"></i>
+                                  </div>
+                                  <div class="text">
+                                      Chỉnh sửa thông tin
+                                  </div>
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                  </div>
+                  
+              </div>
+             
+          </div>
+      </div>
+
+      <style>
+        /* CSS cho khung bên phải */
+        
+        /* CSS cho khung bên trái */
+       /* CSS cho khung bên phải */
+       #rightPanel {
+    width: 850px; /* Độ rộng */
+    max-height: 90%; /* Chiều cao tối đa */
+    overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá kích thước */
+    background-color: #ffffff; /* Màu nền trắng */
+    border: 2px solid #4caf50; /* Viền màu xanh lá */
+    border-radius: 20px; /* Góc tròn */
+    position: fixed; /* Đặt vị trí cố định */
+    top: 2.5%; /* Đặt vị trí cao hơn 5% so với phía trên cùng */
+    right: 51%; /* Đặt vị trí vào giữa theo chiều ngang và dịch sang phải 1% */
+    transform: translateX(60%); /* Dịch chuyển vị trí sang phải 50% */
+    z-index: 999; /* Độ sâu của khung */
+    padding: 40px; /* Khoảng cách đến nội dung */
+}
+
+
+    </style>
+
+    <div class="container-fluid">
+        <!-- Các phần còn lại của trang ở đây -->
+    </div>
+
+    <!-- Khung bên phải -->
+    <div id="rightPanel">
+      <h2 style="font-family: 'Arial', sans-serif;">Quản lý Phòng Khách Sạn</h2>
+  
+       <!-- Form để nhập dữ liệu -->
+  <form id="roomForm">
+    <label for="type">Loại phòng:</label>
+    <input type="text" id="type" name="type" required>
+    <label for="roomCode">Mã phòng:</label>
+    <input type="text" id="roomCode" name="roomCode" required>
+    <label for="name">Tên phòng:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="image">Hình ảnh (URL):</label>
+    <input type="text" id="image" name="image">
+    <label for="price">Mức giá:</label>
+    <input type="number" id="price" name="price" min="0" required>
+    <button class="btn-submit" type="submit">Thêm Phòng</button>
+  </form>
+  <script src="java.js"></script>
+  <!-- Bảng hiển thị dữ liệu -->
+  <table id="roomTable">
+    <thead>
+      <tr>
+        <th>Loại phòng</th>
+        <th>Mã phòng</th>
+        <th>Tên Phòng</th>
+        <th>Hình ảnh</th>
+        <th>Mức giá</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody id="roomData">
+    </tbody>
+  </table> <!-- Nội dung của khung bên phải -->
+    </div>
+
+    <!-- Khung bên trái -->
+    <div id="leftPanel">
+        <!-- Nội dung của khung bên trái -->
+    </div>
+    <script>
+      function toggleRoomForm() {
+          var roomFormContainer = document.getElementById('roomFormContainer');
+          if (roomFormContainer.style.display === 'none') {
+              roomFormContainer.style.display = 'block';
+          } else {
+              roomFormContainer.style.display = 'none';
+          }
+      }
+    </script>
+</body>
+</html>
